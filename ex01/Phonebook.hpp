@@ -6,7 +6,7 @@
 /*   By: cdeville <cdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 16:01:43 by cdeville          #+#    #+#             */
-/*   Updated: 2024/09/12 14:04:23 by cdeville         ###   ########.fr       */
+/*   Updated: 2024/09/12 15:55:33 by cdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ public:
 	~Phonebook();
 	int		assign(void);
 	void	print(void);
-	// int		get_index(void);
 };
 
 #endif

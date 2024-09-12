@@ -6,7 +6,7 @@
 /*   By: cdeville <cdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 19:30:16 by cdeville          #+#    #+#             */
-/*   Updated: 2024/09/12 14:47:40 by cdeville         ###   ########.fr       */
+/*   Updated: 2024/09/12 15:58:26 by cdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 
 Contacts::Contacts()
 {
-	std::cout << "Contact default constructor called\n" << std::endl;
-	// this->_infos ;
+	std::cout << "\e[0;32mContact default constructor called\e[0m" << std::endl;
 }
 
 void	print_prompt_msg(int i)
@@ -41,11 +40,11 @@ int	Contacts::assign(void)
 	std::string	str[5];
 
 	i = 0;
-	std::cout << "Contact constructor called\n" << std::endl;
+	std::cout << "\e[0;35mContact constructor called\e[0m" << std::endl;
 	while (i < 5)
 	{
 		print_prompt_msg(i);
-		if (!(std::cin >> str[i]))
+		if (!(std::getline(std::cin, str[i])))
 		{
 			std::cout << "Error while reading cin stream" << std::endl;
 			return (1);
@@ -111,7 +110,7 @@ Contacts::~Contacts()
 	int	i;
 
 	i = 0;
-	std::cout << "Contact destructor called\n" << std::endl;
+	std::cout << "\e[0;31mContact destructor called\e[0m" << std::endl;
 	while (i < 5)
 	{
 		this->_infos[i] = "";

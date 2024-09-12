@@ -6,7 +6,7 @@
 /*   By: cdeville <cdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 13:24:42 by cdeville          #+#    #+#             */
-/*   Updated: 2024/09/12 14:48:00 by cdeville         ###   ########.fr       */
+/*   Updated: 2024/09/12 15:55:27 by cdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,9 @@
 
 Phonebook::Phonebook()
 {
-	std::cout << "Phonebook default constructor called\n" << std::endl;
+	std::cout << "\e[0;32mPhonebook default constructor called\e[0m" << std::endl;
 	this->last_index = 0;
-	// this->_infos ;
 }
-
-// int	Phonebook::get_index(void)
-// {
-// 	for (int i = 0; i < 8; i++)
-// 	{
-// 		if (this->list[i].empty())
-// 			return (i);
-// 		i++;
-// 	}
-// 	// otherwise return oldest;
-// }
 
 int	Phonebook::assign(void)
 {
@@ -53,11 +41,11 @@ void	Phonebook::print(void)
 		this->list[i].print();
 		i++;
 	}
+	if (this->list[0].empty())
+		std::cout << "Phonebook is empty.." << std::endl;
 }
 
 Phonebook::~Phonebook()
 {
-	std::cout << "Phonebook destructor called\n" << std::endl;
-	// for (int i = 0; i < 8; i++)
-	// 	this->list[i].~Contacts();
+	std::cout << "\e[0;31mPhonebook destructor called\e[0m" << std::endl;
 }
