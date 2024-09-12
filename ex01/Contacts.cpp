@@ -6,7 +6,7 @@
 /*   By: cdeville <cdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 19:30:16 by cdeville          #+#    #+#             */
-/*   Updated: 2024/09/11 20:07:52 by cdeville         ###   ########.fr       */
+/*   Updated: 2024/09/12 14:47:40 by cdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 Contacts::Contacts()
 {
-	Contacts::infos;
+	std::cout << "Contact default constructor called\n" << std::endl;
+	// this->_infos ;
 }
 
 void	print_prompt_msg(int i)
@@ -34,33 +35,86 @@ void	print_prompt_msg(int i)
 		std::cout << msg << std::endl;
 }
 
-Contacts::Contacts(std::ios cin)
+int	Contacts::assign(void)
 {
 	int			i;
 	std::string	str[5];
 
 	i = 0;
+	std::cout << "Contact constructor called\n" << std::endl;
 	while (i < 5)
 	{
 		print_prompt_msg(i);
 		if (!(std::cin >> str[i]))
 		{
 			std::cout << "Error while reading cin stream" << std::endl;
-			return ;
+			return (1);
 		}
 		if (str[i].empty())
 		{
 			std::cout << "A field can't be empty, attribution has failed."
 				<< std::endl;
-			return ;
+			return (1);
 		}
 		i++;
 	}
+	for (int i = 0; i < 5; i++)
+		this->_infos[i] = str[i];
+	return (0);
+}
+
+void	print_column(int i, std::string str)
+{
+	int	count;
+
+	count = 0;
+	while (str[count] && count < 9)
+		std::cout << str[count++];
+	if (count == 9)
+	{
+		std::cout << '.';
+		count++;
+	}
+	while (count < 10)
+	{
+		std::cout << ' ';
+		count++;
+	}
+	if (i != 3)
+		std::cout << '|';
+}
+
+void	Contacts::print(void)
+{
+	int			i;
+
 	i = 0;
-	while (i < 5)
-		Contacts::infos[i] = str[i++];
+	if (this->empty())
+		return ;
+	while (i < 4)
+	{
+		print_column(i, this->_infos[i]);
+		i++;
+	}
+	std::cout << std::endl;
+}
+
+bool	Contacts::empty(void)
+{
+	if (this->_infos[0].empty())
+		return (true);
+	return (false);
 }
 
 Contacts::~Contacts()
 {
+	int	i;
+
+	i = 0;
+	std::cout << "Contact destructor called\n" << std::endl;
+	while (i < 5)
+	{
+		this->_infos[i] = "";
+		i++;
+	}
 }
