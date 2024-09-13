@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Phonebook.cpp                                      :+:      :+:    :+:   */
+/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cdeville <cdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 13:24:42 by cdeville          #+#    #+#             */
-/*   Updated: 2024/09/12 15:55:27 by cdeville         ###   ########.fr       */
+/*   Updated: 2024/09/13 14:53:21 by cdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Phonebook.hpp"
+#include "PhoneBook.hpp"
 
-Phonebook::Phonebook()
+PhoneBook::PhoneBook()
 {
-	std::cout << "\e[0;32mPhonebook default constructor called\e[0m" << std::endl;
+	std::cout << "\e[0;32mPhoneBook default constructor called\e[0m" << std::endl;
 	this->last_index = 0;
 }
 
-int	Phonebook::assign(void)
+int	PhoneBook::assign(void)
 {
 	Contacts	tmp;
 	std::cout << "New contact:" << std::endl;
@@ -31,7 +31,7 @@ int	Phonebook::assign(void)
 		(this->last_index)++;
 	return (0);
 }
-void	Phonebook::print(void)
+void	PhoneBook::print(void)
 {
 	int			i;
 
@@ -42,10 +42,10 @@ void	Phonebook::print(void)
 		i++;
 	}
 	if (this->list[0].empty())
-		std::cout << "Phonebook is empty.." << std::endl;
+		std::cout << "PhoneBook is empty.." << std::endl;
 }
 
-Phonebook::~Phonebook()
+PhoneBook::~PhoneBook()
 {
-	std::cout << "\e[0;31mPhonebook destructor called\e[0m" << std::endl;
+	std::cout << "\e[0;31mPhoneBook destructor called\e[0m" << std::endl;
 }

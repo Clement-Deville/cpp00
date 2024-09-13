@@ -6,7 +6,7 @@
 #    By: cdeville <cdeville@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/12 16:23:30 by peanut            #+#    #+#              #
-#    Updated: 2024/09/12 15:37:16 by cdeville         ###   ########.fr        #
+#    Updated: 2024/09/13 14:53:21 by cdeville         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SRC_DIR = ./
 
 SRC =	main.cpp \
 		Contacts.cpp \
-		Phonebook.cpp \
+		PhoneBook.cpp \
 
 SRCS = $(addprefix $(SRC_DIR), $(SRC))
 

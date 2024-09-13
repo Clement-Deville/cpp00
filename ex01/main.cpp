@@ -6,15 +6,15 @@
 /*   By: cdeville <cdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 19:02:28 by cdeville          #+#    #+#             */
-/*   Updated: 2024/09/12 15:56:49 by cdeville         ###   ########.fr       */
+/*   Updated: 2024/09/13 14:53:21 by cdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Phonebook.hpp"
+#include "PhoneBook.hpp"
 
 int	main(void)
 {
-	Phonebook	test;
+	PhoneBook	test;
 	std::string	lign;
 
 	std::cout << "Prompt: ";
