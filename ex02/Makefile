@@ -6,11 +6,11 @@
 #    By: cdeville <cdeville@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/12 16:23:30 by peanut            #+#    #+#              #
-#    Updated: 2024/09/12 16:05:15 by cdeville         ###   ########.fr        #
+#    Updated: 2024/09/13 14:38:28 by cdeville         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME=ex02
+NAME=bank_loger
 
 CC=c++
 

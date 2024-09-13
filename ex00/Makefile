@@ -6,11 +6,11 @@
 #    By: cdeville <cdeville@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/12 16:23:30 by peanut            #+#    #+#              #
-#    Updated: 2024/09/05 15:14:23 by cdeville         ###   ########.fr        #
+#    Updated: 2024/09/13 14:44:57 by cdeville         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME=ex00
+NAME=megaphone
 
 CC=c++
 
