@@ -6,7 +6,7 @@
 /*   By: cdeville <cdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 19:30:16 by cdeville          #+#    #+#             */
-/*   Updated: 2024/09/12 15:58:26 by cdeville         ###   ########.fr       */
+/*   Updated: 2024/10/29 15:10:21 by cdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	print_prompt_msg(int i)
 	if (i == 2)
 		msg = "Enter your nickname name:";
 	if (i == 3)
-		msg = "Enter your phone number name:";
+		msg = "Enter your phone number:";
 	if (i == 4)
 		msg = "Enter your darkest secret name:";
 	if (!msg.empty())
@@ -40,7 +40,6 @@ int	Contacts::assign(void)
 	std::string	str[5];
 
 	i = 0;
-	std::cout << "\e[0;35mContact constructor called\e[0m" << std::endl;
 	while (i < 5)
 	{
 		print_prompt_msg(i);
