@@ -6,7 +6,7 @@
 /*   By: cdeville <cdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 19:02:28 by cdeville          #+#    #+#             */
-/*   Updated: 2024/10/29 15:06:44 by cdeville         ###   ########.fr       */
+/*   Updated: 2024/11/07 16:15:59 by cdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,9 @@ int	main(void)
 			test.print();
 		else if (lign == "EXIT")
 			return (0);
-		else if (lign != "\n")
+		else
 			std::cerr << "Invalid command" << std::endl;
-		if (lign.empty() == false)
-			std::cout << "\e[0;33mPrompt: \e[0m" << std::endl;
+		std::cout << "\e[0;33mPrompt: \e[0m" << std::endl;
 	}
 	std::cerr << "End of file or error while reading cin" << std::endl;
 	return (1);

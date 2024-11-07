@@ -6,7 +6,7 @@
 /*   By: cdeville <cdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 13:24:42 by cdeville          #+#    #+#             */
-/*   Updated: 2024/09/13 14:53:21 by cdeville         ###   ########.fr       */
+/*   Updated: 2024/11/07 16:06:31 by cdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,9 @@ void	PhoneBook::print(void)
 	i = 0;
 	while (i < 8)
 	{
+		if (this->list[i].empty())
+			break ;
+		std::cout << i;
 		this->list[i].print();
 		i++;
 	}

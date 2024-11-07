@@ -6,7 +6,7 @@
 /*   By: cdeville <cdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 19:30:16 by cdeville          #+#    #+#             */
-/*   Updated: 2024/10/29 15:10:21 by cdeville         ###   ########.fr       */
+/*   Updated: 2024/11/07 16:09:27 by cdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,11 @@ void	print_column(int i, std::string str)
 	int	count;
 
 	count = 0;
+	if (i == -1)
+	{
+		std::cout << "         |";
+		return ;
+	}
 	while (str[count] && count < 9)
 		std::cout << str[count++];
 	if (count == 9)
@@ -78,7 +83,7 @@ void	print_column(int i, std::string str)
 		std::cout << ' ';
 		count++;
 	}
-	if (i != 3)
+	if (i != 2)
 		std::cout << '|';
 }
 
@@ -89,7 +94,8 @@ void	Contacts::print(void)
 	i = 0;
 	if (this->empty())
 		return ;
-	while (i < 4)
+	print_column(-1, "");
+	while (i < 3)
 	{
 		print_column(i, this->_infos[i]);
 		i++;
